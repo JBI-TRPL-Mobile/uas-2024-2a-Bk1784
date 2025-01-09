@@ -75,7 +75,7 @@ class ProfilePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,
-        items: [
+        items:const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
