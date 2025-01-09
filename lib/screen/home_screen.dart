@@ -28,7 +28,14 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold
               ),
             ),
-            
+            const SizedBox(height: 10),
+            const Text(
+              "welcome to jurrasic park in here many information about dinosaurs",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey,
+              ),
+            ),
           ],
         ),
       ),
