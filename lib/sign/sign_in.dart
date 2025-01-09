@@ -75,18 +75,13 @@ class SignIn extends StatelessWidget {
                         if (email == 'bagus123@gmail.com' &&
                             password == 'pass123') {
                           //memindahkan ke halaman profile
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => ProfilePage(
                                       email: email,
-                                    )),
-                          );
-                        } else {
-                          //pesan kesalahan
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                              content: Text("email atau password salah")));
-                        }
+                                    )));
+                        } 
                       },
                       child: Text("Sign In")),
                 ),
