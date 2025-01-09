@@ -7,8 +7,9 @@ class SettingOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(title),
+      title: Text(title, style: TextStyle(color: Colors.white),),
       trailing: Icon(
+        color: Colors.white,
         Icons.arrow_forward_ios,
         size: 16,
       ),

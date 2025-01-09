@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:template_project/title/section_title.dart';
+import 'package:template_project/title/setting_option.dart';
 import '';
 
 class ProfilePage extends StatelessWidget {
@@ -34,7 +36,19 @@ class ProfilePage extends StatelessWidget {
             ),
             Expanded(child: ListView(
               children: [
-                SectionTitle()
+                SectionTitle(title: 'Video Preference',),
+                SettingOption(title: 'Download Option'),
+                SettingOption(title: 'Video Playback Options'),
+
+                SectionTitle(title: 'Account Settings',),
+                SettingOption(title: 'Account security'),
+                SettingOption(title: 'Email Notification Preferences'),
+                SettingOption(title: 'Learing Reminders'),
+
+                SectionTitle(title: 'Account Settings',),
+                SettingOption(title: 'Frequently Asked Questions'),
+                SettingOption(title: 'Share the Learnout App'),
+                
               ],
             ))
           ],
