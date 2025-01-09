@@ -51,6 +51,17 @@ class SignIn extends StatelessWidget {
                     "Forget Password?",
                     style: TextStyle(color: Colors.blue),
                   )),
+                ),
+                SizedBox(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)
+                      ),
+                      minimumSize: Size(200, 48)
+                    ),
+                    onPressed: (){}, 
+                    child: Text("Sign In")),
                 )
               ],
             ),
