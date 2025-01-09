@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:template_project/title/section_title.dart';
 import 'package:template_project/title/setting_option.dart';
-import '';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key, required this.email}) : super(key: key) ;
@@ -12,9 +11,9 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme:const IconThemeData(color: Colors.white),
         backgroundColor: Colors.black,
-        title: Text(
+        title:const Text(
           style: TextStyle(color: Colors.white),
           "Profile"
           ),
@@ -49,10 +48,52 @@ class ProfilePage extends StatelessWidget {
                 SettingOption(title: 'Frequently Asked Questions'),
                 SettingOption(title: 'Share the Learnout App'),
                 
+                Padding(padding: EdgeInsets.symmetric(vertical: 20),
+                child: Center(
+                  child: TextButton(style:TextButton.styleFrom(
+                    backgroundColor: Colors.black
+                  ) ,onPressed: (){}, child: Text(
+                    'Log Out',
+                    style: TextStyle(
+                      color: Colors.red,
+                      fontSize: 16
+                    ),
+                  )),
+                ),
+                )
               ],
-            ))
+            ),
+            
+            )
           ],
         ),
+      
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home, color: Colors.white,), 
+            label: '',
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.comment, color: Colors.white,), 
+            label: '',
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book, color: Colors.white,),
+            label: ''
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, color: Colors.white,),
+            label: ''
+            ),
+      ],
+      currentIndex: 2,
+      onTap: (value) {
+        
+      },
       ),
     );
   }
