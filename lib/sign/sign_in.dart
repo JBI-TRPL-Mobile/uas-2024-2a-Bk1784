@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -15,84 +16,108 @@ class SignIn extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Spacer(),
                 const Text(
                   "Sign in",
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Text(
-                  'masukkan username dan password', style: TextStyle(fontSize: 14, color: Colors.grey ),
+                  'masukkan username dan password',
+                  style: TextStyle(fontSize: 14, color: Colors.grey),
                 ),
-                const SizedBox(height: 30,),
-                const TextField(
+                const SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
-                    labelText: "masukkan email",
-                    prefixIcon: Icon(Icons.email),
-                    border: OutlineInputBorder()
-                  ),
+                      labelText: "masukkan email",
+                      prefixIcon: Icon(Icons.email),
+                      border: OutlineInputBorder()),
                 ),
-                const SizedBox(height: 30,),
-                const TextField(
+                const SizedBox(
+                  height: 30,
+                ),
+                TextField(
+                  controller: passwordController,
                   decoration: InputDecoration(
-                    labelText: "masukkan password",
-                    prefixIcon: Icon(Icons.lock),
-                    suffixIcon: Icon(Icons.visibility),
-                    border: OutlineInputBorder()
-                  ),
+                      labelText: "masukkan password",
+                      prefixIcon: Icon(Icons.lock),
+                      suffixIcon: Icon(Icons.visibility),
+                      border: OutlineInputBorder()),
                 ),
-                const SizedBox(height: 10,),
+                const SizedBox(
+                  height: 10,
+                ),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: TextButton(onPressed: (){}, child: const Text(
-                    "Forget Password?",
-                    style: TextStyle(color: Colors.blue),
-                  )),
+                  child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Forget Password?",
+                        style: TextStyle(color: Colors.blue),
+                      )),
                 ),
                 SizedBox(
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4)
-                      ),
-                      minimumSize: Size(200, 48)
-                    ),
-                    onPressed: (){}, 
-                    child: Text("Sign In")),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4)),
+                          minimumSize: Size(200, 48)),
+                      onPressed: () {},
+                      child: Text("Sign In")),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Center(
                   child: Text("or sign in with"),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                  IconButton(onPressed: 
-                  (){}, icon: Image.asset('../assets/google.png',width: 40.0,height: 40.0,)),
-                  SizedBox(width: 40,),
-                  IconButton(onPressed: 
-                  (){}, icon: Image.asset('../assets/facebook.png',width: 40.0,height: 40.0,)),
-                 ],
+                  children: [
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image.asset(
+                          '../assets/google.png',
+                          width: 40.0,
+                          height: 40.0,
+                        )),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Image.asset(
+                          '../assets/facebook.png',
+                          width: 40.0,
+                          height: 40.0,
+                        )),
+                  ],
                 ),
-                SizedBox(height: 50,),
+                SizedBox(
+                  height: 50,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Don't have an account?"),
                     GestureDetector(
-                      onTap: (){},
-                      child: Text("Sign Up Now", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
-                    )
+                      onTap: () {},
+                      child: Text(
+                        "Sign Up Now",
+                        style: TextStyle(
+                            color: Colors.blue, fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 )
               ],
             ),
           ),
-          ),
-        
+        ),
       ),
     );
   }
