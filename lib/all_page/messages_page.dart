@@ -12,6 +12,11 @@ class MessagesPage extends StatelessWidget {
           "Messages",
           style: TextStyle(color: Colors.black),
         ),
+        centerTitle: true,
+        iconTheme: IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.white,))
+        ],
       ),
     );
   }
