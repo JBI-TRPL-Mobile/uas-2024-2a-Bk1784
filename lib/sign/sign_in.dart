@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -54,7 +56,25 @@ class SignIn extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        //validasi login
+                        final email = emailController.text;
+                        final password = passwordController.text;
+                        if (email == 'bagus123@gmail.com' &&
+                            password == 'pass123') {
+                          //memindahkan ke halaman profile
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    ProfilePage(email: email)),
+                          );
+                        } else {
+                          //pesan kesalahan
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                              content: Text("email atau password salah")));
+                        }
+                      },
                       child: const Text(
                         "Forget Password?",
                         style: TextStyle(color: Colors.blue),
