@@ -14,7 +14,6 @@ class SignIn extends StatelessWidget {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Spacer(),
                 Text(
@@ -27,6 +26,23 @@ class SignIn extends StatelessWidget {
                 SizedBox(height: 10,),
                 Text(
                   'masukkan username dan password', style: TextStyle(fontSize: 14, color: Colors.grey ),
+                ),
+                SizedBox(height: 30,),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: "masukkan email",
+                    prefixIcon: Icon(Icons.email),
+                    border: OutlineInputBorder()
+                  ),
+                ),
+                SizedBox(height: 30,),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: "masukkan password",
+                    prefixIcon: Icon(Icons.lock),
+                    suffixIcon: Icon(Icons.visibility),
+                    border: OutlineInputBorder()
+                  ),
                 )
               ],
             ),
