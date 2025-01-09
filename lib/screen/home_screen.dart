@@ -36,6 +36,36 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
+            SizedBox(height: 50,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                  SizedBox(
+                  width: 100,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4)
+                      )
+                    ),
+                    onPressed: (){}, child: Text("Sign In")
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                  SizedBox(
+                    width: 100,
+                    child: OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4)
+                        )
+                      ),
+                      onPressed: (){}, child: Text('Sign Up')
+                      ),
+                  ),
+              ],
+            )
+          
           ],
         ),
       ),
