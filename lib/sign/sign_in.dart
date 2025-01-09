@@ -62,6 +62,20 @@ class SignIn extends StatelessWidget {
                     ),
                     onPressed: (){}, 
                     child: Text("Sign In")),
+                ),
+                SizedBox(height: 20,),
+                Center(
+                  child: Text("or sign in with"),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                 children: [
+                  IconButton(onPressed: 
+                  (){}, icon: Image.asset('../assets/google.png',width: 40.0,height: 40.0,)),
+                  SizedBox(width: 40,),
+                  IconButton(onPressed: 
+                  (){}, icon: Image.asset('../assets/facebook.png',width: 40.0,height: 40.0,)),
+                 ],
                 )
               ],
             ),
