@@ -76,6 +76,17 @@ class SignIn extends StatelessWidget {
                   IconButton(onPressed: 
                   (){}, icon: Image.asset('../assets/facebook.png',width: 40.0,height: 40.0,)),
                  ],
+                ),
+                SizedBox(height: 50,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Don't have an account?"),
+                    GestureDetector(
+                      onTap: (){},
+                      child: Text("Sign Up Now", style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),),
+                    )
+                  ],
                 )
               ],
             ),
