@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen  extends StatelessWidget {
-  const HomeScreen ({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final mediaQUeryHeight = MediaQuery.of(context).size.height;
+    final mediaQUeryWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(58, 66, 86, 1.0),
-        centerTitle: true,
-        title: Text("UAS", style: TextStyle(color: Colors.white),),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 200,
-              height: 150,
+              width: mediaQUeryWidth * 0.7,
+              height: mediaQUeryHeight * 0.3,
               color: Colors.grey,
               child: Icon(Icons.image),
             )
