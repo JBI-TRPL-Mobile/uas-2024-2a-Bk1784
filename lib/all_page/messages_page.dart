@@ -54,7 +54,40 @@ class MessagesPage extends StatelessWidget {
           );
         },
       ),
-      
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
+        items:const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.comment,
+              color: Colors.white,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.book,
+                color: Colors.white,
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+              label: ''),
+        ],
+        currentIndex: 2,
+        onTap: (value) {},
+      ),
     );
   }
 }
