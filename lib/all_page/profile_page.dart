@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key, required this.email}) : super(key: key) ;
@@ -31,6 +32,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             ),
+            Expanded(child: ListView(
+              children: [
+                SectionTitle()
+              ],
+            ))
           ],
         ),
       ),
