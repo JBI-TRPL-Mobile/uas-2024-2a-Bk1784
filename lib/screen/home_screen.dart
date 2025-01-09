@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template_project/sign/sign_in.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,16 +18,20 @@ class HomeScreen extends StatelessWidget {
               width: mediaQUeryWidth * 0.7,
               height: mediaQUeryHeight * 0.3,
               color: Colors.grey,
-              child: Icon(Icons.image, color: Colors.white,),
+              child: Icon(
+                Icons.image,
+                color: Colors.white,
+              ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             const Text(
               "Welcome To Jurrasic Park",
               style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
-                fontWeight: FontWeight.bold
-              ),
+                  fontSize: 24,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             const Text(
@@ -36,36 +41,40 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 50,),
+            SizedBox(
+              height: 50,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                  SizedBox(
+                SizedBox(
                   width: 100,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4)
-                      )
-                    ),
-                    onPressed: (){}, child: Text("Sign In")
-                    ),
-                  ),
-                  SizedBox(width: 20,),
-                  SizedBox(
-                    width: 100,
-                    child: OutlinedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4))),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => SignIn()),
+                        );
+                      },
+                      child: Text("Sign In")),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                SizedBox(
+                  width: 100,
+                  child: OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4)
-                        )
-                      ),
-                      onPressed: (){}, child: Text('Sign Up')
-                      ),
-                  ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4))),
+                      onPressed: () {},
+                      child: Text('Sign Up')),
+                ),
               ],
             )
-          
           ],
         ),
       ),
