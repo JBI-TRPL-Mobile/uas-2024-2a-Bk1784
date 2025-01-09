@@ -16,6 +16,24 @@ class ProfilePage extends StatelessWidget {
           "Profile"
           ),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(padding: EdgeInsets.symmetric(vertical: 20.0),
+            child: CircleAvatar(
+              radius: 50,
+              backgroundColor: Colors.grey[300],
+              child: Icon(
+                Icons.person,
+                size: 50,
+                color: Colors.grey[600],
+              ),
+            ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
