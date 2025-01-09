@@ -6,43 +6,51 @@ class SignIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Spacer(),
-                Text(
+                const Spacer(),
+                const Text(
                   "Sign in",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold
                   ),
                 ),
-                SizedBox(height: 10,),
-                Text(
+                const SizedBox(height: 10,),
+                const Text(
                   'masukkan username dan password', style: TextStyle(fontSize: 14, color: Colors.grey ),
                 ),
-                SizedBox(height: 30,),
-                TextField(
+                const SizedBox(height: 30,),
+                const TextField(
                   decoration: InputDecoration(
                     labelText: "masukkan email",
                     prefixIcon: Icon(Icons.email),
                     border: OutlineInputBorder()
                   ),
                 ),
-                SizedBox(height: 30,),
-                TextField(
+                const SizedBox(height: 30,),
+                const TextField(
                   decoration: InputDecoration(
                     labelText: "masukkan password",
                     prefixIcon: Icon(Icons.lock),
                     suffixIcon: Icon(Icons.visibility),
                     border: OutlineInputBorder()
                   ),
+                ),
+                const SizedBox(height: 10,),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(onPressed: (){}, child: const Text(
+                    "Forget Password?",
+                    style: TextStyle(color: Colors.blue),
+                  )),
                 )
               ],
             ),
