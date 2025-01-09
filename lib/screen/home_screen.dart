@@ -17,8 +17,18 @@ class HomeScreen extends StatelessWidget {
               width: mediaQUeryWidth * 0.7,
               height: mediaQUeryHeight * 0.3,
               color: Colors.grey,
-              child: Icon(Icons.image),
-            )
+              child: Icon(Icons.image, color: Colors.white,),
+            ),
+            const SizedBox(height: 20,),
+            const Text(
+              "Welcome To Jurrasic Park",
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            
           ],
         ),
       ),
